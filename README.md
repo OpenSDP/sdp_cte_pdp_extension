@@ -1,16 +1,16 @@
 # The SDP PDP Extension Tool
 
-This tool is an extension of Harvard's [Strategic Data Project (SDP)](https://sdp.cepr.harvard.edu/home) [CTE Diagnostic Toolkit](https://sdp.cepr.harvard.edu/sdp-cte-diagnostic-toolkit). 
+This tool is an extension of the Harvard [Strategic Data Project (SDP)](https://sdp.cepr.harvard.edu/home) [CTE Diagnostic Toolkit](https://sdp.cepr.harvard.edu/sdp-cte-diagnostic-toolkit). 
 
 It is developped for institutions that participate in the Postsecondary Data Partnership (PDP) to help them answer key questions on student success from the CTE Diagnostic, using their PDP [Analysis-Ready (AR) Files](https://help.studentclearinghouse.org/pdp/knowledge-base/using-the-analysis-ready-files). 
 
-Specfically, this tool simplifies the data preparation process required for the CTE Diagnostic by leveraging the standardization of the AR files. This tool provides Stata code that transforms an institution's AR files into appropriate dataframes for the CTE Diagnostic analyses.
+Specfically, this tool simplifies the data preparation process required for the SDP-CTE Diagnostic by leveraging the standardization of the AR files. This tool provides Stata code that transforms an institution's AR files into appropriate dataframes for the SDP-CTE Diagnostic analyses.
 
-This tool also adds new dimensions to the analysis included in the original CTE Diagnostic by looking at student outcomes specific to the AR files, in particular short-term outcomes, to enrich institutions' understanding of their students' success.
+This tool also adds new dimensions to the analysis included in the original SDP-CTE Diagnostic by looking at student outcomes specific to the AR files, in particular short-term outcomes, to enrich institutions' understanding of their students' success.
 
 This README.md document explains how this tool is structured, and provides step by step instructions on how to use it with your PDP data. The [StepByStepGuide.pdf](StepByStepGuide.pdf) is a hands-on complement to this README, with screenshots and detailed instructions on how to navigate this tool. 
 
-The [ReportDemo.md](ReportDemo.md) document serves as an example of the kind of graphs and analyses you can generate with this tool. The documentation of the [CTE Diagnostic Toolkit](https://sdp.cepr.harvard.edu/sdp-cte-diagnostic-toolkit), in particular the narrative and the technical guide, contain much more in-depth information on the content of the analyses you can generate with this tool, and how to interpret them with regards to your student's success. This tool and its documentation focuses mostly on how to implement these analyses using PDP data. It is recommended that you become familiar with the contents of the CTE Diagnostic before diving into this extension.
+The [ReportDemo.md](ReportDemo.md) document serves as an example of the kind of graphs and analyses you can generate with this tool. The documentation of the [SDP-CTE Diagnostic Toolkit](https://sdp.cepr.harvard.edu/sdp-cte-diagnostic-toolkit), in particular the narrative and the technical guide, contain much more in-depth information on the content of the analyses you can generate with this tool, and how to interpret them with regards to your student's success. This tool and its documentation focuses mostly on how to implement these analyses using PDP data. It is recommended that you become familiar with the contents of the SDP-CTE Diagnostic before diving into this extension.
 
 ## Introduction
 
@@ -21,7 +21,7 @@ to answer new, program-level questions about postsecondary student success, part
 
 ### Background
 
-The National Student Clearinghouse’s Postsecondary Data Partnership (PDP) offers important, interactive dashboards that enable institutions of higher education to visualize student outcomes in aggregated and disaggregated forms. The Strategic Data Project, in partnership with ResearchEd and with support from the Gates Foundation, has developed a tool to help institutions deepen the insights provided by the PDP and answer additional program-level questions about student success, drawing upon SDP’s postsecondary-focused CTE diagnostic code and analyses. 
+The National Student Clearinghouse’s Postsecondary Data Partnership (PDP) offers important, interactive dashboards that enable institutions of higher education to visualize student outcomes in aggregated and disaggregated forms. The Strategic Data Project, in partnership with ResearchEd and with support from the Gates Foundation, has developed a tool to help institutions deepen the insights provided by the PDP and answer additional program-level questions about student success, drawing upon SDP’s postsecondary-focused SDP-CTE diagnostic code and analyses. 
 
 This tool leverages the fact that the PDP AR files are standardized, making it very easy to adapt this tool's code to each institution and produce reports by plugging PDP data into the tool's code. This tool provides a simple starting point to leveraging your PDP AR file and produce new insights, beyond the PDP dashboards.
 
@@ -34,15 +34,15 @@ Using this tool you will be able to:
 
 This tool contains code and instructions to
 - transform your PDP Analysis-Ready Files into the appropriate data structure for our analysis purpose; we will call this step "Make Data"
-- use these transformed datasets to create relevant graphs and tables featured in the [CTE Diagnostic Toolkit](https://sdp.cepr.harvard.edu/sdp-cte-diagnostic-toolkit); we will call this step "Make Report"
+- use these transformed datasets to create relevant graphs and tables featured in the [SDP-CTE Diagnostic Toolkit](https://sdp.cepr.harvard.edu/sdp-cte-diagnostic-toolkit); we will call this step "Make Report"
 
 Given the PDP Analysis-Ready Files follow a standardized, predictable format, the code is meant to be as close to plug-and-play as possible. This readme provides instructions on how to set up the tool with your own data and parameters, and where to adjust the code if needed.
 
-At the time of this writing the PDP Analysis Ready files do not contain information on student pathways, a core dimension of the CTE diagnostic. To address this, this tool includes a data entry step aimed at combining student pathway data with data from your PDP Analysis-Ready Files; we will call this step "Enter Data". This readme also provides instructions on how to enter and label your student pathway data before running the analyses.
+At the time of this writing the PDP Analysis-Ready files do not contain information on student pathways, a core dimension of the SDP-CTE diagnostic. To address this, this tool includes a data entry step aimed at combining student pathway data with data from your PDP Analysis-Ready Files; we will call this step "Enter Data". This readme also provides instructions on how to enter and label your student pathway data before running the analyses.
 
 ## Contents: What kind of analyses and insights can I expect from this tool?
 
-This repository contains an example of the graphs and tables generated by this tool in the [ReportDemo.md](ReportDemo.md). The sections of the report mirror those of the CTE Diagnostic. It also adds a few dimensions for the analysis, leveraging the specificity and richness of the data available in the PDP Analysis-Ready Files.
+This repository contains an example of the graphs and tables generated by this tool in the [ReportDemo.md](ReportDemo.md). The sections of the report mirror those of the SDP-CTE Diagnostic. It also adds a few dimensions for the analysis, leveraging the specificity and richness of the data available in the PDP Analysis-Ready Files.
 
 Specifically, the sections are 
 
@@ -50,18 +50,18 @@ Specifically, the sections are
     This section corresponds to Section 0 in the SDP Diagnostic, though the original SDP Diagnostic did not include code files for this section. The current tool provides some example code for simple graphs you may want to generate to describe your data.
 
 - **Section 1 : Completion** which contains two sub-sections
-  - The Completion by Pathway subsection is analogous to Section 1 of the original SDP CTE Diagnostic, and focuses on student completion outcomes by pathway.
-  - The Completion by Credential Sought subsection is an addition compared to the SDP CTE Diagnostic. It follows the same logic as the previous subsection, but analyzes data by credential sought instead of pathway, leveraging the fact that the PDP Analysis Ready files contain information on credential at entry.     
+  - The Completion by Pathway subsection is analogous to Section 1 of the original SDP-CTE Diagnostic, and focuses on student completion outcomes by pathway.
+  - The Completion by Credential Sought subsection is an addition compared to the SDP-CTE Diagnostic. It follows the same logic as the previous subsection, but analyzes data by credential sought instead of pathway, leveraging the fact that the PDP Analysis-Ready files contain information on credential at entry.     
 
 - **Section 2 : Mapping Student Progression** which contains two sub-sections
-  - The Pathways Over Time subsection is analogous to the SDP diagnostic's Section 2, and looks at student outcomes by pathway over time. One key difference with the SDP diagnostic is that, because the PDP Analysis Ready Files contain year-level outcome data instead of term-level outcome data, the graphs in this unit display progression year by year, instead of term by term.
+  - The Pathways Over Time subsection is analogous to the SDP diagnostic's Section 2, and looks at student outcomes by pathway over time. One key difference with the SDP diagnostic is that, because the PDP Analysis-Ready Files contain year-level outcome data instead of term-level outcome data, the graphs in this unit display progression year by year, instead of term by term.
   - The Short-Term Outcomes subsection focuses on Year 2 outcomes available in the PDP Analysis-Ready Files : Retention and Persistence. It contains similar analyses as those in Section 1, but focused on these two short term outcomes, instead of final completion outcomes.
 
 - **Section 3 : Gate-Keeper Courses**  
-    This section is analogous to Section 3 in SDP's CTE Diagnostic, and looks at gate-keeper courses in each pathway.
+    This section is analogous to Section 3 in the SDP-CTE Diagnostic, and looks at gate-keeper courses in each pathway.
 
 - **Section 4 : Credit Accumulation**  
-    This section is analogous to Section 4 in SDP's CTE Diagnostic, and looks at credit accumulation over time. 
+    This section is analogous to Section 4 in the SDP-CTE Diagnostic, and looks at credit accumulation over time. 
 
 
 ## Getting Started: How do I get this tool?
@@ -77,7 +77,7 @@ Whether you fork/clone or download the repository, it is important to keep the f
 You will first download the tool and save its contents to your own machine, so you can run it on your own data.
 
 You will then copy and save the following data files to your tool folder on your local machine, inside the dedicated subfolders of the tool 
-- Your PDP Analysis Ready Files under `1_data-pdp`
+- Your PDP Analysis-Ready Files under `1_data-pdp`
 - Your student pathway information under `2_data-toolkit`
 
 The AR files are already standardized and formatted, and you can get help on how to find them [here](https://tinyurl.com/ARFILEPLEASE). 
@@ -147,7 +147,7 @@ The dofile does two things :
 
 ### Step 1. Add PDP Data 
 
-Find your PDP Analysis Ready (AR) Files, copy and save them under the `1_data-pdp` subfolder of this tool. For this tool, we are only using the AR Cohort file and the AR Course file, so you only need to copy these two in that folder. If you need help finding your PDP AR files, you can go [here](https://tinyurl.com/ARFILEPLEASE).
+Find your PDP Analysis-Ready (AR) Files, copy and save them under the `1_data-pdp` subfolder of this tool. For this tool, we are only using the AR Cohort file and the AR Course file, so you only need to copy these two in that folder. If you need help finding your PDP AR files, you can go [here](https://tinyurl.com/ARFILEPLEASE).
 
 Once that is done, add your PDP AR file names to the `1.1.Add-PDP-Data.do` dofile, where the globals are being defined. It is important for these names to be updated at this stage, as the next dofiles (from step 2 onward) will refer to them. This dofile also contains a more detailed explanation of how globals work in Stata, and why adding the name of the file here will be useful for other scripts as well.
 
@@ -194,4 +194,4 @@ Some data construction scripts also create data diagnostics, to ensure there are
 
 Finally, you can run the analytical files of the tool. These use the dataframes created in Step 4, and export graphs and tables under `4_output`. The dofiles contain example code for different graphs, but more can be added depending on your analytical dimensions of interest. 
 
-The `ReportDemo.md` provides an example of how to integrate the graphs into a narrative document. More details on the contents and interpretations of these analyses are available in SDP's CTE Diagnostic narrative and technical guide.
+The `ReportDemo.md` provides an example of how to integrate the graphs into a narrative document. More details on the contents and interpretations of these analyses are available in the SDP-CTE Diagnostic narrative and technical guide.
