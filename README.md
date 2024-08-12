@@ -1,10 +1,19 @@
 # The SDP PDP Extension Tool
 
-This tool is an extension of the Harvard [Strategic Data Project (SDP)](https://sdp.cepr.harvard.edu/home) [CTE Diagnostic Toolkit](https://sdp.cepr.harvard.edu/sdp-cte-diagnostic-toolkit). 
+This tool is an extension of the Harvard [Strategic Data Project (SDP)](https://sdp.cepr.harvard.edu/home) [CTE Diagnostic Toolkit](https://sdp.cepr.harvard.edu/sdp-cte-diagnostic-toolkit). This goal of this resource is to help institutions of higher education that participate in the Postsecondary Data Partnership (PDP) use their PDP [Analysis-Ready Files](https://help.studentclearinghouse.org/pdp/knowledge-base/using-the-analysis-ready-files) 
+to answer new, program-level questions about postsecondary student success, particularly students moving through certificate and credentialing pathways in college, utilizing [SDP]((https://sdp.cepr.harvard.edu/home))’s [postsecondary CTE diagnostic toolkit]((https://sdp.cepr.harvard.edu/sdp-cte-diagnostic-toolkit)). 
 
-It is developped for institutions that participate in the Postsecondary Data Partnership (PDP) to help them answer key questions on student success from the CTE Diagnostic, using their PDP [Analysis-Ready (AR) Files](https://help.studentclearinghouse.org/pdp/knowledge-base/using-the-analysis-ready-files). 
+The SDP-CTE Diagnostic is intended to provide analyses that will help leaders at community and technical colleges develop and pursue strategic inquiries into patterns of student success. This document’s primary audience is analysts looking to provide actionable information to institutional leaders. While it offers proposed questions, visualizations, and variable definitions throughout the Diagnostic, it is meant to be a flexible framework that supports a careful examination of factors contributing to students’ success outcomes. The Diagnostic is structured around four questions that are critical to answer for institutions seeking to improve their students’ success: 
 
-Specfically, this tool simplifies the data preparation process required for the SDP-CTE Diagnostic by leveraging the standardization of the AR files. This tool provides Stata code that transforms an institution's AR files into appropriate dataframes for the SDP-CTE Diagnostic analyses.
+- Are students more likely to complete some pathways than others? Are pathways equitably supporting students with different levels of academic preparation and students of different demographic characteristics to successful outcomes? 
+
+- Are students dropping or transferring out of some pathways more than others? Where do they go? 
+
+- Are there some required or “gateway” courses that are getting in the way of completion for some pathways? 
+
+- What credit accumulation patterns set students up for longer-term success? How many students are following these patterns? 
+
+This tool builds on the SDP-CTE Diagnostic and simplifyies the data preparation process required for the analyses by leveraging the standardization of the AR files. This tool provides Stata code that transforms an institution's AR files into appropriate dataframes for the SDP-CTE Diagnostic analyses.
 
 This tool also adds new dimensions to the analysis included in the original SDP-CTE Diagnostic by looking at student outcomes specific to the AR files, in particular short-term outcomes, to enrich institutions' understanding of their students' success.
 
@@ -13,11 +22,6 @@ This README.md document explains how this tool is structured, and provides step 
 The [ReportDemo.md](ReportDemo.md) document serves as an example of the kind of graphs and analyses you can generate with this tool. The documentation of the [SDP-CTE Diagnostic Toolkit](https://sdp.cepr.harvard.edu/sdp-cte-diagnostic-toolkit), in particular the narrative and the technical guide, contain much more in-depth information on the content of the analyses you can generate with this tool, and how to interpret them with regards to your student's success. This tool and its documentation focuses mostly on how to implement these analyses using PDP data. It is recommended that you become familiar with the contents of the SDP-CTE Diagnostic before diving into this extension.
 
 ## Introduction
-
-### Objective
-
-This goal of this resource is to help institutions of higher education that participate in the Postsecondary Data Partnership (PDP) use their PDP [Analysis-Ready Files](https://help.studentclearinghouse.org/pdp/knowledge-base/using-the-analysis-ready-files) 
-to answer new, program-level questions about postsecondary student success, particularly students moving through certificate and credentialing pathways in college, utilizing [SDP]((https://sdp.cepr.harvard.edu/home))’s [postsecondary CTE diagnostic toolkit]((https://sdp.cepr.harvard.edu/sdp-cte-diagnostic-toolkit)).  
 
 ### Background
 
